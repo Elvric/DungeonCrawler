@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- ROOM.HTML: Main room html page -->
+<html>
+<title>COMP206 A4</title>
+<body background="https://scontent.fyhu1-1.fna.fbcdn.net/v/t1.0-9/17522967_150746458785750_1310174469530381337_n.jpg?oh=d68905427645b53c1ea03facdbc67b85&oe=598B7D9A">
+	<center><img src="http://hbu.h-cdn.co/assets/15/15/1428509417-target-gif-sun-room.gif" alt="Room" width="800" height="425"></center>
+	<center><h2> Welcome! </h2></center>
+	<center><font color="#001a33"><h3> YOU CAN: PLAY| DROP n | EXIT | REFRESH </h3></font></center>
+	
+<!-- Teleportation button processing using p.py -->
+	<form name="input" action="/~rke/cgi-bin/transporter.py" method="get">
+		<input type="hidden" name="inventory" value="1,0">
+		<input type="hidden" name="url" value="https://www.cs.mcgill.ca/~jzhang207">
+		<center><input type="submit" value="NORTH" name="north"></center> 
+	</form>
+	
+<div style="float: left; padding-left: 500px">
+	<form name="input" action="/~syu47/cgi-bin/transporter.py" method="post">
+		<input type="hidden" name="inventory" value="1,0">
+		<input type="hidden" name="URL" value="https://www.cs.mcgill.ca/~jzhang207/cgi-bin/a.out.cgi">
+		<center><input type="submit" value="WEST" name="west"></center> 
+	</form>
+</div>
+
+<div style="float: right; padding-right: 500px">
+	<form name="input" action="/~hnguye124/cgi-bin/transporter.py" method="get">
+		<input type="hidden" name="inventory" value="1,0">
+		<input type="hidden" name="URL" value="https://www.cs.mcgill.ca/~jzhang207/cgi-bin/a.out.cgi?command=REFRESH&inventory=1%2C0&submit=SUBMIT">
+		<center><input type="submit" value="EAST" name="east"></center> 
+	</form>
+</div><br>
+
+	<form name="input" action="/~ppoppe/cgi-bin/transporter.py" method="post">
+		<input type="hidden" name="inventory" value="1,0">
+		<input type="hidden" name="URL" value="https://www.cs.mcgill.ca/~jzhang207/cgi-bin/a.out.cgi?command=REFRESH&inventory=1%2C0&submit=SUBMIT">
+		<center><input type="submit" value="SOUTH" name="south"></center> 
+	</form>
+<br>
+	
+	<!-- Textbox processing using c.cgi executable -->
+	<form name="input" action="/~jzhang207/cgi-bin/a.out.cgi" method="get">
+		<!-- Command textbox -->
+		<center><input type = "text" id = "myText" name = "command"></center>
+		<!-- Player's inventory -->
+		<input type="hidden" name="inventory" value="1,0">
+		<!-- Submit button -->
+		<center><input type="submit" value="SUBMIT" name = "submit"></center>
+	</form>
+</body>
+</html>
