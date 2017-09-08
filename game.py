@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#Coded by Elvric Trombert
 import random
 import sys
 import csv
